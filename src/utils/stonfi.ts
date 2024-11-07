@@ -113,9 +113,9 @@ export async function buy_sell_startOnStonfi(mnemonic: string, length: number, j
         for (let i = 0; i < length; i++) {
           
           await buyJettonOnStonfi(subwallet, jettonAddress, key);
-          await sleep(300000);
+          await sleep(120000);
           await sellJettonOnStonfi(subwallet, jettonAddress, key);
-          await sleep(300000);
+          await sleep(120000);
         }
 
         const subwallet2 = WalletContractV4.create({
